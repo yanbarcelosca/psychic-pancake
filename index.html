@@ -1,5 +1,20 @@
 <html>
   <body>
     <p>Hello world!</p>
+
+    <script type="text/javascript">
+      function initEmbeddedMessaging() {
+        try {
+          embeddedservice_bootstrap.settings.language = "en_US"; // For example, enter 'en' or 'en-US'
+
+          embeddedservice_bootstrap.init("00DKZ000003AXBV", "YAN_Test", "https://cg1748232194493.my.site.com/ESWYANTest1754063321794", {
+            scrt2URL: "https://cg1748232194493.my.salesforce-scrt.com",
+          });
+        } catch (err) {
+          console.error("Error loading Embedded Messaging: ", err);
+        }
+      }
+    </script>
+    <script type="text/javascript" src="https://cg1748232194493.my.site.com/ESWYANTest1754063321794/assets/js/bootstrap.min.js" onload="initEmbeddedMessaging()"></script>
   </body>
 </html>
